@@ -24,31 +24,33 @@ class App extends Component {
     return (
       <div className="App">
         < Navbar />
-        <table>
-          <tr>
-            <th>Name</th>
-            <th>Team</th>
-            <th>Games</th>
-            <th>Goals</th>
-          </tr>
-          
-          {this.state.players.map(player =>
+        <div id="player-table">
+          <table>
             <tr>
-              <td>
-                {player.first_name} {player.last_name}
-              </td>
-              <td>
-                {player.afl_team}
-              </td>
-              <td>
-                {player.afl_games || "-"}
-              </td>
-              <td>
-                {player.afl_goals || "-"}
-              </td>
+              <th>Name</th>
+              <th>Team</th>
+              <th>Games</th>
+              <th>Goals</th>
             </tr>
-          )}
-        </table>
+            
+            {this.state.players.map(player =>
+              <tr>
+                <td>
+                  {player.first_name} {player.last_name}
+                </td>
+                <td>
+                  {player.afl_team}
+                </td>
+                <td>
+                  {player.afl_games || "-"}
+                </td>
+                <td>
+                  {player.afl_goals || "-"}
+                </td>
+              </tr>
+            )}
+          </table>
+        </div>
       </div>
     );
   }
@@ -62,19 +64,21 @@ class App extends Component {
     return (
       <div className="App">
         < Navbar />
-        <table>
-          <tr>
-            <th>Team</th>
-          </tr>
-          
-          {uniqueTeam.map(team =>
+        <div id="team-table">
+          <table>
             <tr>
-              <td>
-                {team}
-              </td>
+              <th>Team</th>
             </tr>
-          )}
-        </table>
+            
+            {uniqueTeam.map(team =>
+              <tr>
+                <td>
+                  {team}
+                </td>
+              </tr>
+            )}
+          </table>
+        </div>
       </div>
     );
   }
