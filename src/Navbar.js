@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav>
       <a href="http://localhost:3000/">Home</a>
       <a href="http://localhost:3000/teams/">Teams</a>
-      <a href="http://localhost:3000/players/">All Players</a>
+      <a href="http://localhost:3000/players/">Players</a>
     </nav>
   )
 }
