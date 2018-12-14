@@ -29,8 +29,11 @@ class App extends Component {
             <tr>
               <th>Name</th>
               <th>Team</th>
+              <th>Number</th>
               <th>Games</th>
               <th>Goals</th>
+              <th>Junior Team</th>
+              <th>D.O.B</th>
             </tr>
             
             {this.state.players.map(player =>
@@ -42,10 +45,19 @@ class App extends Component {
                   {player.afl_team}
                 </td>
                 <td>
+                  {player.afl_number || "-"}
+                </td>
+                <td>
                   {player.afl_games || "-"}
                 </td>
                 <td>
                   {player.afl_goals || "-"}
+                </td>
+                <td>
+                  {player.junior_team || "-"}
+                </td>
+                <td>
+                  {player.dob || "-"}
                 </td>
               </tr>
             )}

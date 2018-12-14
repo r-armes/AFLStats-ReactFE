@@ -41,6 +41,10 @@ nav a:hover {
   color: bisque;
 }
 
+body {
+  background: bisque;
+}
+
 
 table {
   margin-top: 3vh;
